@@ -13,3 +13,9 @@ func ParseBody(r *http.Request, x interface{}) {
 		}
 	}
 }
+
+func RespondJson(w http.ResponseWriter, data []byte, status int) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(status)
+	w.Write(data)
+}
