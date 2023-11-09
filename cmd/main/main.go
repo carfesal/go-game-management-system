@@ -17,5 +17,5 @@ func main() {
 	routes.RegisterRoutes(router)
 
 	//Create the server
-	log.Fatal(http.ListenAndServe(":8000", router))
+	log.Fatal(http.ListenAndServe("localhost:9010", router))
 }
