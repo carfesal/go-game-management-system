@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -18,4 +19,5 @@ func main() {
 
 	//Create the server
 	log.Fatal(http.ListenAndServe("localhost:9010", router))
+	fmt.Println("Server running on port 9010")
 }
